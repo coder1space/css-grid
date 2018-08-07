@@ -1,0 +1,41 @@
+@import "mixins/grids";
+
+.grid {
+  @include display-grid;
+  @include grid-template-columns(100px 100px 100px 100px 100px, 2px); // Cols & gap
+  @include grid-template-rows(100px 100px 100px 100px 100px, 2px); // Rows & gap
+
+  .cell{
+    background-color: #999999;
+    &.cell_1 {
+      @include grid-child(1, 1, 1, 1); // col_start,col_end,row_start,row_end
+    }
+    &.cell_2 {
+      @include grid-child(2, 4, 1, 3);
+    }
+    &.cell_3 {
+      @include grid-child(5, 5, 1, 1);
+    }
+    &.cell_4 {
+      @include grid-child(1, 1, 2, 2);
+    }
+    &.cell_5 {
+      @include grid-child(5, 5, 2, 4);
+    }
+    &.cell_6 {
+      @include grid-child(1, 1, 3, 3);
+    }
+    &.cell_7 {
+      @include grid-child(1, 4, 4, 4);
+    }
+    &.cell_8 {
+      @include grid-child(1, 1, 5, 5);
+    }
+    &.cell_9 {
+      @include grid-child(2, 4, 5, 5);
+    }
+    &.cell_10 {
+      @include grid-child(5, 5, 5, 5);
+    }
+  }
+}
