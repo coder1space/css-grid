@@ -13,7 +13,11 @@
   -ms-grid-rows: 100px 2px 100px 2px 100px 2px 100px 2px 100px;
   grid-template-rows: 100px 100px 100px 100px 100px; }
   .grid .cell {
-    background-color: #999999; }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #999999;
+    font-size: 26px; }
     .grid .cell.cell_1 {
       -ms-grid-column: 1;
       -ms-grid-column-span: 1;
